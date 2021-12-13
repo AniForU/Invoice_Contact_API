@@ -3,8 +3,8 @@
 Simple web app to insert data into mongodb and get result in matching way. 
 
 ## Application Logic
-1) Find values from mongodb where organization id provided through the body and contact name or extracted contact name. The response would provide result score and contact name which would be calculated on the basis of data exist in Database
-2) FInd the amount from the database, if data provide in the request having descrepensies in the history data. Abnoramlity is find using standard deviation and mean of historical amount for the organization_id 
+1) Find values from mongodb against the input ORGANIZATION_ID and PARTIAL/FULL CONTACT NAME provided in the request body. The response would provide result SCORE and CONTACT NAME, which would be calculated on the basis of historical data for input.
+2) Check the Abnormality of the data provided in the request with the historical data and give the result as Boolean. Abnormality is calculated using standard deviation and mean of historical AMOUNT corresponding to the ORGANIZATION_ID and PARTIAL/FULL CONTACT NAME.
 
 ## Virtual environments
 To create a python virtual environment
