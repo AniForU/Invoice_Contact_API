@@ -87,6 +87,11 @@ $ curl -X 'POST' .:5000/updateContact -d '{"_id":"unique-contact-id","iban":"Hel
 ```
 $ curl -X 'POST' .:5000/checkAbnormalContactUri -d '{"organization":"organization-id","contactName":"Ani","amount":26.3}'
 ```
+## Get Suggested invoice from the historical data
+```
+$ curl -X 'POST' .:5000/suggestContactInvoice -d '{"contactName":"Ani","organization":"organization-id"}'
+```
+
 ## get invoice detail
 ```
 $ curl  .:5000/invoice/unique-invoice-id
