@@ -92,7 +92,7 @@ $ curl -X 'POST' .:5000/checkAbnormalContactUri -d '{"organization":"organizatio
 $ curl -X 'POST' .:5000/suggestContactInvoice -d '{"contactName":"Ani","organization":"organization-id"}'
 ```
 
-## get invoice detail
+## Get Invoice Detail
 ```
 $ curl  .:5000/invoice/unique-invoice-id
 ```
