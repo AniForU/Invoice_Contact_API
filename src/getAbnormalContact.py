@@ -26,7 +26,7 @@ def get_abnormal_contact_info():
                             "message": "No Data Found"
                         }
                 }
-                return jsonify(return_message), 404
+                return jsonify(return_message), 205
             return calculate_abnoramlacy(transformed_request.amount,result)
         except Exception as e:
             return_message = {
@@ -35,9 +35,9 @@ def get_abnormal_contact_info():
                         "message": "Body content is not correct, please refer the documentation."
                     }
             }
-            return jsonify(return_message), 404
+            return jsonify(return_message), 400
     except:
-        return "",404
+        return "",400
 
 
 def calculate_abnoramlacy(amount, result):
@@ -53,7 +53,7 @@ def calculate_abnoramlacy(amount, result):
                     "message": "No Data Found"
                 }
         }
-        return return_message, 404
+        return return_message, 205
     mean_value = statistics.mean(different_amounts)
     standard_dev = statistics.pstdev(different_amounts)
     if amount >(mean_value+standard_dev) or amount<(mean_value-standard_dev):

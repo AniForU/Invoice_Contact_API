@@ -23,7 +23,7 @@ def add_new_invoice():
                         "message": "Duplicate Id Occured"
                     }
             }
-            return jsonify(return_message), 404
+            return jsonify(return_message), 205
         except Exception as e:
 
             return_message = {
@@ -32,7 +32,7 @@ def add_new_invoice():
                         "message": "Body content is not correct, please refer the documentation."
                     }
             }
-        return jsonify(return_message), 404
+        return jsonify(return_message), 400
 
     except Exception as e:
         return_message = {
@@ -41,4 +41,4 @@ def add_new_invoice():
                     "message": "Body content is not correct, please refer the documentation."
                 }
         }
-        return jsonify(return_message), 404
+        return jsonify(return_message), 400

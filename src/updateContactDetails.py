@@ -16,7 +16,7 @@ def update_contact_details():
                     "message": "Body content is not correct, please refer the documentation."
                 }
         }
-        return jsonify(return_message), 404
+        return jsonify(return_message), 400
 
     try:
         contact_id = contact.id

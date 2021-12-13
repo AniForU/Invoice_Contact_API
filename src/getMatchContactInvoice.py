@@ -25,7 +25,7 @@ def get_match_suggest_contact():
                             "message": "No Data Found"
                         }
                 }
-                return jsonify(return_message), 404
+                return jsonify(return_message), 205
             response= check_confidence_contact(result,total_score)
             return jsonify(response[0]), response[1]
         except:
@@ -33,7 +33,7 @@ def get_match_suggest_contact():
                 message = {
                     "Message": "Could not get any result"
                 }
-            return jsonify(message), 204
+            return jsonify(message), 205
 
     except Exception as e:
         return_message = {
@@ -42,7 +42,7 @@ def get_match_suggest_contact():
                     "message": "Body content is not correct, please refer the documentation."
                 }
         }
-        return jsonify(return_message), 404
+        return jsonify(return_message), 400
 
 
 def check_confidence_contact(result,total_score):
