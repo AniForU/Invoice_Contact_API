@@ -96,3 +96,8 @@ $ curl -X 'POST' .:5000/suggestContactInvoice -d '{"contactName":"Ani","organiza
 ```
 $ curl  .:5000/invoice/unique-invoice-id
 ```
+
+## Deactivate the virtual environment
+```
+$ deactivate
+```
